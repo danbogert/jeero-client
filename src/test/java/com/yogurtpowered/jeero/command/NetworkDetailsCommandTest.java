@@ -151,6 +151,13 @@ public class NetworkDetailsCommandTest {
                     null,
                     null,
                     null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
                     null);
 
             return (T) new NetworkResponse(null, data);

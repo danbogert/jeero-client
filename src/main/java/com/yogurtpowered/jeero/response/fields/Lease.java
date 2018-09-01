@@ -9,7 +9,7 @@ public class Lease {
 
     public Lease(@JsonProperty("mode") String mode,
                  @JsonProperty("dhcp") Dhcp dhcp,
-                 @JsonProperty("statik") String statik) {
+                 @JsonProperty("static") String statik) {
         this.mode = mode;
         this.dhcp = dhcp;
         this.statik = statik;
@@ -32,7 +32,7 @@ public class Lease {
         return "Lease{" +
                 "mode='" + mode + '\'' +
                 ", dhcp=" + dhcp +
-                ", statik='" + statik + '\'' +
+                ", static='" + statik + '\'' +
                 '}';
     }
 }

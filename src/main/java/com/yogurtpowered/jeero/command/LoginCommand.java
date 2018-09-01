@@ -9,6 +9,8 @@ import java.io.*;
 import java.util.Optional;
 
 public class LoginCommand extends AbstractRestCommand<Boolean> {
+    private static final String LOGIN_PATH = "/2.2/login";
+    private static final String LOGIN_VERIFY_PATH = "/2.2/login/verify";
     protected static final String COOKIE_FILE = ".jeeroClient";
 
     @Override
@@ -48,7 +50,7 @@ public class LoginCommand extends AbstractRestCommand<Boolean> {
         String phoneNumber = SCANNER.nextLine();
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(API_BASE_URL)
-                .path("login")
+                .path(LOGIN_PATH)
                 .queryParam("login", phoneNumber);
 
         LoginResponse loginResponse = exchange(builder.toUriString(), HttpMethod.POST, LoginResponse.class);
@@ -65,7 +67,7 @@ public class LoginCommand extends AbstractRestCommand<Boolean> {
         String verificationCode = SCANNER.nextLine();
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(API_BASE_URL)
-                .path("login/verify")
+                .path(LOGIN_VERIFY_PATH)
                 .queryParam("code", verificationCode);
 
         exchange(builder.toUriString(), HttpMethod.POST, AccountResponse.class);

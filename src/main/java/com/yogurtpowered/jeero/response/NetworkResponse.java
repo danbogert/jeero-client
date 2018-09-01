@@ -43,6 +43,13 @@ public class NetworkResponse extends Response<NetworkResponse.NetworkData> {
         private final Updates updates;
         private final PremiumDns premiumDns;
         private final Map<String, Capability> capabilities;
+        private final String[] messages;
+        private final String[] upstream;
+        private final String rebooting;
+        private final String lastReboot;
+        private final String ipv6Lease;
+        private final String organization;
+        private final String imageAssets;
 
         public NetworkData(@JsonProperty("url") String url,
                            @JsonProperty("resources") Map<String, String> resources,
@@ -73,7 +80,14 @@ public class NetworkResponse extends Response<NetworkResponse.NetworkData> {
                            @JsonProperty("lease") Lease lease,
                            @JsonProperty("updates") Updates updates,
                            @JsonProperty("premium_dns") PremiumDns premiumDns,
-                           @JsonProperty("capabilities") Map<String, Capability> capabilities) {
+                           @JsonProperty("capabilities") Map<String, Capability> capabilities,
+                           @JsonProperty("messages") String[] messages,
+                           @JsonProperty("upstream") String[] upstream,
+                           @JsonProperty("rebooting") String rebooting,
+                           @JsonProperty("last_reboot") String lastReboot,
+                           @JsonProperty("ipv6_lease") String ipv6Lease,
+                           @JsonProperty("organization") String organization,
+                           @JsonProperty("image_assets") String imageAssets) {
             this.url = url;
             this.resources = resources;
             this.flags = flags;
@@ -104,6 +118,13 @@ public class NetworkResponse extends Response<NetworkResponse.NetworkData> {
             this.updates = updates;
             this.premiumDns = premiumDns;
             this.capabilities = capabilities;
+            this.messages = messages;
+            this.upstream = upstream;
+            this.rebooting = rebooting;
+            this.lastReboot = lastReboot;
+            this.ipv6Lease = ipv6Lease;
+            this.organization = organization;
+            this.imageAssets = imageAssets;
         }
 
         public String getUrl() {
@@ -226,6 +247,34 @@ public class NetworkResponse extends Response<NetworkResponse.NetworkData> {
             return capabilities;
         }
 
+        public String[] getMessages() {
+            return messages;
+        }
+
+        public String[] getUpstream() {
+            return upstream;
+        }
+
+        public String getRebooting() {
+            return rebooting;
+        }
+
+        public String getLastReboot() {
+            return lastReboot;
+        }
+
+        public String getIpv6Lease() {
+            return ipv6Lease;
+        }
+
+        public String getOrganization() {
+            return organization;
+        }
+
+        public String getImageAssets() {
+            return imageAssets;
+        }
+
         @Override
         public String toString() {
             return "{" +
@@ -259,6 +308,13 @@ public class NetworkResponse extends Response<NetworkResponse.NetworkData> {
                     "\n\tupdates=" + updates +
                     "\n\tpremiumDns=" + premiumDns +
                     "\n\tcapabilities=" + capabilities +
+                    "\n\tmessages=" + Arrays.toString(messages) +
+                    "\n\tupstream=" + Arrays.toString(upstream) +
+                    "\n\trebooting=" + rebooting +
+                    "\n\tlastReboot=" + lastReboot +
+                    "\n\tipv6Lease=" + ipv6Lease +
+                    "\n\torganization=" + organization +
+                    "\n\timageAssets=" + imageAssets +
                     '}';
         }
     }
