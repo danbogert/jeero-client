@@ -4,20 +4,28 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.Assert.*;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Calendar;
 import java.util.TimeZone;
 
 public class AccountTest {
+    private static String testResponse;
+    private static ObjectMapper mapper;
 
-    private static final String TEST_RESPONSE = "{\"meta\":{\"code\":200,\"server_time\":\"2018-08-17T02:52:33.898Z\"},\"data\":{\"name\":\"My Name\",\"phone\":{\"value\":\"+1234567890\",\"verified\":true},\"email\":{\"value\":\"email@example.com\",\"verified\":true},\"log_id\":\"UID0000000000\",\"organization_id\":null,\"networks\":{\"count\":1,\"data\":[{\"url\":\"/2.2/networks/1234\",\"name\":\"ssid\",\"created\":\"2000-02-25T00:00:00.000000Z\"}]},\"role\":\"none\",\"can_transfer\":false,\"premium_status\":\"trial_eligible\",\"push_settings\":{\"networkOffline\":false,\"nodeOffline\":false},\"trust_certificates_etag\":\"cert-etag-value\"}}";
-    private static final ObjectMapper MAPPER = new ObjectMapper();
+    @BeforeClass
+    public static void setUpBeforeClass() throws IOException {
+        testResponse = new String(Files.readAllBytes(Paths.get("src/test/resources/accountResponse.json")));
+        mapper = new ObjectMapper();
+    }
 
     @Test
     public void testParseResponse() throws IOException {
-        final AccountResponse account = MAPPER.readValue(TEST_RESPONSE, AccountResponse.class);
+        final AccountResponse account = mapper.readValue(testResponse, AccountResponse.class);
 
         assertEquals(200, account.getMeta().getResponseCode());
         assertEquals("My Name", account.getData().getName());

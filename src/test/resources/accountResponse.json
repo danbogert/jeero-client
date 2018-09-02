@@ -1,0 +1,37 @@
+{
+  "data": {
+    "can_transfer": false,
+    "email": {
+      "value": "email@example.com",
+      "verified": true
+    },
+    "log_id": "UID0000000000",
+    "name": "My Name",
+    "networks": {
+      "count": 1,
+      "data": [
+        {
+          "created": "2000-02-25T00:00:00.000000Z",
+          "name": "ssid",
+          "url": "/2.2/networks/1234"
+        }
+      ]
+    },
+    "organization_id": null,
+    "phone": {
+      "value": "+1234567890",
+      "verified": true
+    },
+    "premium_status": "trial_eligible",
+    "push_settings": {
+      "networkOffline": false,
+      "nodeOffline": false
+    },
+    "role": "none",
+    "trust_certificates_etag": "cert-etag-value"
+  },
+  "meta": {
+    "code": 200,
+    "server_time": "2018-08-17T02:52:33.898Z"
+  }
+}

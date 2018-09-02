@@ -1,0 +1,241 @@
+{
+  "data": {
+    "band_steering": false,
+    "capabilities": {
+      "ad_block": {
+        "capable": false,
+        "requirements": {
+          "has_adblock_feature_flag": true,
+          "has_adblock_group": true,
+          "has_adblock_min_mobile_version": false,
+          "has_adblock_min_version": true,
+          "has_adblock_throttle": true,
+          "has_premium": false,
+          "premium_capable": true
+        }
+      },
+      "led_action": {
+        "capable": true,
+        "requirements": {
+          "has_min_mobile_version": true,
+          "has_min_version": true
+        }
+      }
+    },
+    "clients": {
+      "count": 10,
+      "url": "/2.2/networks/0000/clients"
+    },
+    "connection": {
+      "mode": "nat"
+    },
+    "dhcp": {
+      "custom": null,
+      "mode": "automatic"
+    },
+    "dns": {
+      "caching": false,
+      "custom": null,
+      "mode": "automatic",
+      "parent": {
+        "ips": [
+          "192.168.1.1"
+        ]
+      }
+    },
+    "eeros": {
+      "count": 3,
+      "data": [
+        {
+          "connected_clients_count": 1,
+          "gateway": false,
+          "ip_address": "192.168.5.1",
+          "joined": "2016",
+          "last_reboot": null,
+          "led_on": false,
+          "location": "place1",
+          "mac_address": "mac1",
+          "messages": [],
+          "model_number": "model",
+          "os_version": "version",
+          "serial": "serial1",
+          "status": "green",
+          "update_available": false,
+          "url": "/2.2/eeros/1",
+          "using_wan": false,
+          "wired": false
+        },
+        {
+          "connected_clients_count": 2,
+          "gateway": false,
+          "ip_address": "192.168.5.2",
+          "joined": "2016",
+          "last_reboot": null,
+          "led_on": false,
+          "location": "place2",
+          "mac_address": "mac2",
+          "messages": [],
+          "model_number": "model",
+          "os_version": "version",
+          "serial": "serial2",
+          "status": "green",
+          "update_available": false,
+          "url": "/2.2/eeros/2",
+          "using_wan": false,
+          "wired": false
+        },
+        {
+          "connected_clients_count": 3,
+          "gateway": false,
+          "ip_address": "192.168.5.3",
+          "joined": "2016",
+          "last_reboot": null,
+          "led_on": false,
+          "location": "place3",
+          "mac_address": "mac3",
+          "messages": [],
+          "model_number": "model",
+          "os_version": "version",
+          "serial": "serial3",
+          "status": "green",
+          "update_available": false,
+          "url": "/2.2/eeros/3",
+          "using_wan": false,
+          "wired": false
+        }
+      ]
+    },
+    "flags": [
+      {
+        "flag": "disable_adaptive_ft",
+        "value": true
+      },
+      {
+        "flag": "realtime",
+        "value": {
+          "provider": "prov"
+        }
+      }
+    ],
+    "gateway": "dhcp",
+    "gateway_ip": "192.168.5.1",
+    "geo_ip": {
+      "areaCode": 999,
+      "city": "City",
+      "countryCode": "US",
+      "countryName": "United States",
+      "isp": "Isp",
+      "metroCode": 888,
+      "org": "Org",
+      "postalCode": "12345",
+      "region": "ST",
+      "regionName": "State",
+      "timezone": "America/Zone"
+    },
+    "health": {
+      "eero_network": {
+        "status": "connected"
+      },
+      "internet": {
+        "isp_up": true,
+        "status": "connected"
+      }
+    },
+    "image_assets": null,
+    "ip_settings": {
+      "double_nat": true,
+      "public_ip": "111.222.333.444"
+    },
+    "ipv6_lease": null,
+    "ipv6_upstream": false,
+    "last_reboot": null,
+    "lease": {
+      "dhcp": {
+        "ip": "192.168.1.2",
+        "mask": "255.255.255.0",
+        "router": "192.168.1.1"
+      },
+      "mode": "dhcp",
+      "static": null
+    },
+    "messages": [],
+    "name": "ssid",
+    "organization": null,
+    "owner": "owner",
+    "password": "password",
+    "premium_dns": {
+      "any_policies_enabled_for_network": false,
+      "dns_policies": {
+        "ad_block": false,
+        "block_malware": false
+      },
+      "dns_policies_enabled": false,
+      "zscaler_location_enabled": false
+    },
+    "premium_status": "trial_eligible",
+    "rebooting": null,
+    "resources": {
+      "burst_reporters": "/2.2/networks/4916/burst_reporters",
+      "device_blacklist": "/2.2/networks/4916/blacklist",
+      "devices": "/2.2/networks/4916/devices",
+      "diagnostics": "/2.2/networks/4916/diagnostics",
+      "eeros": "/2.2/networks/4916/eeros",
+      "forwards": "/2.2/networks/4916/forwards",
+      "guestnetwork": "/2.2/networks/4916/guestnetwork",
+      "insights": "/2.2/networks/4916/insights",
+      "ouicheck": "/2.2/networks/4916/ouicheck",
+      "password": "/2.2/networks/4916/password",
+      "profiles": "/2.2/networks/4916/profiles",
+      "reboot": "/2.2/networks/4916/reboot",
+      "reservations": "/2.2/networks/4916/reservations",
+      "settings": "/2.2/networks/4916/settings",
+      "speedtest": "/2.2/networks/4916/speedtest",
+      "support": "/2.2/networks/4916/support",
+      "thread": "/2.2/networks/4916/thread",
+      "transfer": "/2.2/networks/4916/transfer",
+      "updates": "/2.2/networks/4916/updates"
+    },
+    "speed": {
+      "date": "2018-08-31T13:20:44Z",
+      "down": {
+        "units": "Mbps",
+        "value": 500.279256
+      },
+      "status": "none",
+      "up": {
+        "units": "Mbps",
+        "value": 600.850336
+      }
+    },
+    "sqm": false,
+    "status": "connected",
+    "thread": false,
+    "timezone": {
+      "geo_ip": "America/Zone",
+      "value": null
+    },
+    "updates": {
+      "can_update_now": false,
+      "has_update": false,
+      "last_update_started": "2018-08-23T05:17:48.107242Z",
+      "last_user_update": {
+        "incomplete_eeros": [],
+        "last_update_started": "2018-08-23T05:17:48.107242Z",
+        "unresponsive_eeros": []
+      },
+      "min_required_firmware": "v1.1.2",
+      "target_firmware": "v3.9.1-3",
+      "update_required": false,
+      "update_status": null,
+      "update_to_firmware": "v3.9.1-3"
+    },
+    "upnp": true,
+    "upstream": [],
+    "url": "/2.2/networks/4916",
+    "wan_ip": "192.168.1.2"
+  },
+  "meta": {
+    "code": 200,
+    "server_time": "2018-09-01T01:11:05.172Z"
+  }
+}

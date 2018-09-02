@@ -9,8 +9,8 @@ public class GeoIp {
     private final String region;
     private final String timezone;
     private final String postalCode;
-    private final String metroCode;
-    private final String areaCode;
+    private final Integer metroCode;
+    private final Integer areaCode;
     private final String regionName;
     private final String isp;
     private final String org;
@@ -21,8 +21,8 @@ public class GeoIp {
                  @JsonProperty("region") String region,
                  @JsonProperty("timezone") String timezone,
                  @JsonProperty("postalCode") String postalCode,
-                 @JsonProperty("metroCode") String metroCode,
-                 @JsonProperty("areaCode") String areaCode,
+                 @JsonProperty("metroCode") Integer metroCode,
+                 @JsonProperty("areaCode") Integer areaCode,
                  @JsonProperty("regionName") String regionName,
                  @JsonProperty("isp") String isp,
                  @JsonProperty("org") String org) {
@@ -63,11 +63,11 @@ public class GeoIp {
         return postalCode;
     }
 
-    public String getMetroCode() {
+    public Integer getMetroCode() {
         return metroCode;
     }
 
-    public String getAreaCode() {
+    public Integer getAreaCode() {
         return areaCode;
     }
 
