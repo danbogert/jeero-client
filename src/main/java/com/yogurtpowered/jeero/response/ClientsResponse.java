@@ -2,14 +2,19 @@ package com.yogurtpowered.jeero.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.yogurtpowered.jeero.response.fields.*;
+import com.yogurtpowered.jeero.response.fields.Client;
+import com.yogurtpowered.jeero.response.fields.Data;
+import com.yogurtpowered.jeero.response.fields.Meta;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class ClientsResponse extends Response<ClientsResponse.ClientsData> {
@@ -50,17 +55,14 @@ public class ClientsResponse extends Response<ClientsResponse.ClientsData> {
         @Override
         public ClientsData deserialize(JsonParser jp, DeserializationContext ctxt)
                 throws IOException {
-            final JsonNode node = jp.getCodec().readTree(jp);
             final List<Client> clients = new ArrayList<>();
 
-            for (int i = 0; node.has(i); i++) {
-                JsonNode rawClient = node.get(i);
-                clients.add(new Client(
-                        rawClient.get("eui64").asText(),
-                        rawClient.get("hostname").asText(),
-                        rawClient.get("ip").asText(),
-                        getIps(rawClient.get("ips")),
-                        rawClient.get("mac").asText()));
+            if (JsonToken.START_ARRAY == jp.getCurrentToken()) {
+                jp.nextToken();
+                while (JsonToken.END_ARRAY != jp.getCurrentToken()) {
+                    clients.add(ctxt.readValue(jp, Client.class));
+                    jp.nextToken();
+                }
             }
 
             return new ClientsData(clients.toArray(new Client[clients.size()]));
