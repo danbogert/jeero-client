@@ -18,6 +18,8 @@ public class JeeroClient {
                 return (T) new ClientsCommand().execute();
             case GET_DEVICES:
                 return (T) new DevicesCommand().execute();
+            case REBOOT:
+                return (T) new RebootCommand().execute();
             case EXIT:
                 return (T) new ExitCommand().execute();
             default:

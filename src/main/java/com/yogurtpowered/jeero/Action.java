@@ -5,6 +5,7 @@ public enum Action {
     GET_NETWORK_INFO("Get Network Info"),
     GET_CLIENTS("Get Clients"),
     GET_DEVICES("Get Devices"),
+    REBOOT("Reboot Network"),
     EXIT("Exit");
 
     private final String displayName;
