@@ -8,4 +8,6 @@ Currently working features:
 - logging in
 - get account
 - get networks
-- get clients (raw)
+- get clients
+- get devices
+- reboot network
