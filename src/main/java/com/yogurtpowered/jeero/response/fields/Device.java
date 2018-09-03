@@ -2,7 +2,6 @@ package com.yogurtpowered.jeero.response.fields;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.nustaq.serialization.coders.JSONAsString;
 
 import java.util.Arrays;
 
