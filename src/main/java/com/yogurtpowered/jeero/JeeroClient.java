@@ -16,6 +16,8 @@ public class JeeroClient {
                 return (T) new NetworkDetailsCommand().execute();
             case GET_CLIENTS:
                 return (T) new ClientsCommand().execute();
+            case GET_DEVICES:
+                return (T) new DevicesCommand().execute();
             case EXIT:
                 return (T) new ExitCommand().execute();
             default:

@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "connected": true,
+      "connection_type": "wireless",
+      "connectivity": {
+        "rx_bitrate": "50.0 MBit/s",
+        "score": 1,
+        "score_bars": 5,
+        "signal": "-50 dBm",
+        "signal_avg": "-49 dBm"
+      },
+      "device_type": "generic",
+      "eui64": "111111fffe111111",
+      "first_active": "2018",
+      "hostname": null,
+      "interface": {
+        "frequency": "2.4",
+        "frequency_unit": "GHz"
+      },
+      "ip": "192.168.5.1",
+      "ips": [
+        "192.168.5.1"
+      ],
+      "last_active": "2018",
+      "mac": "11:11:11:11:11:11",
+      "manufacturer": "SAMSUNG",
+      "nickname": null,
+      "profile": null,
+      "source": {
+        "location": "eero1"
+      },
+      "url": "/2.2/networks/4916/devices/1",
+      "usage": {
+        "down_mbps": 7.74e-05,
+        "up_mbps": 6.87e-05
+      },
+      "wireless": true
+    }
+  ],
+  "meta": {
+    "code": 200,
+    "server_time": "2018-09-03T01:57:09.830Z"
+  }
+}
