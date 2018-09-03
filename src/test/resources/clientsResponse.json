@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "eui64": "aaaaaafffeaaaaaa",
+      "hostname": "apple",
+      "ip": "192.168.5.11",
+      "ips": [
+        "192.168.5.11"
+      ],
+      "mac": "aa:aa:aa:aa:aa:aa"
+    },
+    {
+      "eui64": "bbbbbbfffebbbbbb",
+      "hostname": "linux",
+      "ip": "192.168.5.22",
+      "ips": [
+        "192.168.5.22"
+      ],
+      "mac": "bb:bb:bb:bb:bb:bb"
+    }
+  ],
+  "meta": {
+    "code": 200,
+    "server_time": "2018-09-02T13:53:40.797Z"
+  }
+}
